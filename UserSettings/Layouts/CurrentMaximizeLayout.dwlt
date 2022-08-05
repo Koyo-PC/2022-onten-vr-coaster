@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 8199
+  controlID: 6329
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 8200
+  controlID: 6330
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 8201
+  controlID: 6331
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8cfaffff22fbffff2cfbffff2efbffff
+      m_ExpandedIDs: e2b4ffff5cb5ffff24c6ffff22cbffff2efbffff3c680000e67b0000ac7f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -504,9 +504,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3619.1943, y: -2874.132, z: -4748.139}
+    m_Target: {x: 79.72876, y: 55.549835, z: -28.719452}
     speed: 2
-    m_Value: {x: -3619.1943, y: -2874.132, z: -4748.139}
+    m_Value: {x: 79.72876, y: 55.549835, z: -28.719452}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -553,13 +553,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.072178185, y: 0.92289835, z: -0.21327598, w: -0.31240246}
+    m_Target: {x: -0.007454537, y: 0.65912586, z: 0.0065108817, w: 0.75199336}
     speed: 2
-    m_Value: {x: -0.072177, y: 0.92288315, z: -0.21327248, w: -0.31239733}
+    m_Value: {x: -0.007454392, y: 0.65911305, z: 0.006510755, w: 0.75197875}
   m_Size:
-    m_Target: 7192.6978
+    m_Target: 901.14435
     speed: 2
-    m_Value: 7192.6978
+    m_Value: 901.14435
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -604,7 +604,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1569
+    x: 351
     y: 73
     width: 1068
     height: 546
@@ -695,8 +695,8 @@ MonoBehaviour:
     y: 567
     width: 1421
     height: 390
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -744,22 +744,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/[BFW]SimpleDynamicClouds/Shaders
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/[BFW]SimpleDynamicClouds/Shaders
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ZOI\Desktop\Document\Koyo\2022-onten-vr-coaster
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 54770000
-    m_LastClickedID: 30548
-    m_ExpandedIDs: 00000000e8740000ea74000004c9000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 60}
+    m_SelectedIDs: a8a70000
+    m_LastClickedID: 42920
+    m_ExpandedIDs: 00000000d6740000d8740000da7400009aa70000a2a7000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -787,7 +787,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e8740000ea74000004c9000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000d6740000d8740000da74000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -812,10 +812,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ca99ffff
-    m_LastClickedInstanceID: -26166
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c623000070200000d65900008e9c000000000000
+    m_SelectedInstanceIDs: e2b4ffff
+    m_LastClickedInstanceID: -19230
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c623000070200000d65900008e9c00000000000056680000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -931,7 +931,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -26166
+  m_LastInspectedObjectInstanceID: -19230
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
