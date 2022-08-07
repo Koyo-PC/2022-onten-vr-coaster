@@ -5,8 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fa4f577-5726-4a90-aad8-e4fc75abaece" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sky.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2022-onten-vr-coaster/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2022-onten-vr-coaster/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sky.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sky.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Buildings/koyo3d.blend.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Buildings/koyo3d.blend.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Example.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Example/01.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Example/01.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Example/01Settings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Example/01Settings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models/Materials/HighCloud.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models/Materials/HighCloud.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models/Materials/LowCloud.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models/Materials/LowCloud.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models/Materials/No Name.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models/Materials/No Name.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models/ball.FBX" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models/ball.FBX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Prefab/Clouds.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Prefab/Clouds.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/ReadMe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/ReadMe.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Shaders/2DClouds.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Shaders/2DClouds.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/DensityMap.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/DensityMap/DensityMap0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/DensityMap/DensityMap0.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/DensityMap/DensityMap1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/DensityMap/DensityMap1.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/ScatterMap.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/ScatterMap/ScatterMap0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/ScatterMap/ScatterMap0.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/ScatterMap/ScatterMap1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/ScatterMap/ScatterMap1.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/ScatterMap/ScatterMap2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/ScatterMap/ScatterMap2.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/ScatterMap/ScatterMap3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/ScatterMap/ScatterMap3.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/TextureMap.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/TextureMap/TextureMap0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Textures/TextureMap/TextureMap0.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +62,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6afd1274f120405096bc1ad9e2010ba6157a00/39/0138de95/Time.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6afd1274f120405096bc1ad9e2010ba6157a00/9f/f6ed50a8/Material.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6afd1274f120405096bc1ad9e2010ba6157a00/fb/cd2a3a91/Transform.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Core/Utilities/ComponentHolderProtocol.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -82,6 +134,7 @@
       <workItem from="1659713262727" duration="763000" />
       <workItem from="1659714527862" duration="12044000" />
       <workItem from="1659794160786" duration="7014000" />
+      <workItem from="1659881762741" duration="5793000" />
     </task>
     <servers />
   </component>

@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 1623
+  controlID: 11437
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 1624
+  controlID: 11438
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1625
+  controlID: 11439
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,7 +228,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 78faffff2efbffff42680000
+      m_ExpandedIDs: 80baffff7abfffff3ee0ffff7ee0ffff88e0ffff8ae0ffff22e2ffff24e2ffff3ce3ffff3ee3ffffbee4ffffc0e4ffffaee5ffffe6e9ffff2efbffff887c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -505,9 +505,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 27.682209, y: 8.720215, z: -6.7202415}
+    m_Target: {x: 1326.4451, y: -1091.1882, z: -2668.5525}
     speed: 2
-    m_Value: {x: 27.682209, y: 8.720215, z: -6.7202415}
+    m_Value: {x: 1326.4451, y: -1091.1882, z: -2668.5525}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -554,13 +554,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.0644316, y: 0.90859467, z: -0.15269458, w: 0.3833938}
+    m_Target: {x: 0.05721539, y: 0.93690205, z: -0.18358764, w: 0.2919863}
     speed: 2
-    m_Value: {x: 0.06443153, y: 0.9085937, z: -0.15269442, w: 0.38339338}
+    m_Value: {x: 0.057214838, y: 0.936893, z: -0.18358587, w: 0.29198346}
   m_Size:
-    m_Target: 45.793423
+    m_Target: 2239.9373
     speed: 2
-    m_Value: 45.793423
+    m_Value: 2239.9373
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -608,7 +608,7 @@ MonoBehaviour:
     x: 351
     y: 73
     width: 1068
-    height: 546
+    height: 535
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -717,22 +717,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sounds/Coaster
+    - Assets/#NVJOB Dynamic Sky/#NVJOB Dynamic Sky/Flare
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sounds/Coaster
+  - Assets/#NVJOB Dynamic Sky/#NVJOB Dynamic Sky/Flare
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\ZOI\Desktop\Document\Koyo\2022-onten-vr-coaster
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: fa810000
-    m_LastClickedID: 33274
-    m_ExpandedIDs: 00000000007500000275000004750000fc81000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 407a0000
+    m_LastClickedID: 31296
+    m_ExpandedIDs: 0000000006750000087500000a7500003c750000cc790000d879000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -760,7 +760,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000000750000027500000475000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000006750000087500000a7500003c750000cc79000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -785,8 +785,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: caedffff
-    m_LastClickedInstanceID: -4662
+    m_SelectedInstanceIDs: 80baffff
+    m_LastClickedInstanceID: -17792
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000070200000d65900008e9c00000000000056680000
     m_RenameOverlay:
@@ -904,7 +904,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -4662
+  m_LastInspectedObjectInstanceID: -17792
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

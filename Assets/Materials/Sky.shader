@@ -92,7 +92,8 @@ Shader "Unlit/Sky"
                 float2 starUV = float2((atan2(rotated.x, rotated.z) + PI) / (2 * PI),
                                        -atan2(sqrt(pow(rotated.x, 2) + pow(rotated.z, 2)), rotated.y) / PI + 1);
 
-                starUV.x -= _Time;
+                // starUV.x -= _Time;
+                starUV.x -= _Round;
 
                 fixed4 night = tex2D(_NightTex, starUV);
                 // if(starUV.y > 1 - 1.0/32) return fixed4(0,1,0,0);
