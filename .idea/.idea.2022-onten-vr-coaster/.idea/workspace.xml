@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fa4f577-5726-4a90-aad8-e4fc75abaece" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2022-onten-vr-coaster/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2022-onten-vr-coaster/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2022-onten-vr-coaster/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2022-onten-vr-coaster/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.2022-onten-vr-coaster/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sky.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sky.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Sky.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Sky.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.2022-onten-vr-coaster/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2022-onten-vr-coaster/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models/Materials/HighCloud.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models/Materials/HighCloud.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models/Materials/LowCloud.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/[BFW]SimpleDynamicClouds/Models/Materials/LowCloud.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +81,7 @@
       <updated>1659713252630</updated>
       <workItem from="1659713262727" duration="763000" />
       <workItem from="1659714527862" duration="12044000" />
-      <workItem from="1659794160786" duration="6145000" />
+      <workItem from="1659794160786" duration="7014000" />
     </task>
     <servers />
   </component>
