@@ -20,9 +20,7 @@ namespace Sky
     public GameObject playerObject;
     private Transform _playerTransform;
     public GameObject horizon;
-    public GameObject horizon_2;
     private Material _horizonMaterial;
-    private Material _horizon2Material;
 
 
     public void Start()
@@ -34,9 +32,7 @@ namespace Sky
       _sunTransform = sunObject.GetComponent<Transform>();
       _playerTransform = playerObject.GetComponent<Transform>();
       if (horizon == null) Debug.LogError("horizon is NULL");
-      if (horizon_2 == null) Debug.LogError("horizon_2 is NULL");
       _horizonMaterial = horizon.GetComponent<Renderer>().material;
-      _horizon2Material = horizon_2.GetComponent<Renderer>().material;
     }
 
     public void Update()
@@ -50,8 +46,6 @@ namespace Sky
 
       _horizonMaterial.SetVector("_Level1Color", getSkyColor(time));
       _horizonMaterial.SetVector("_Level0Color", getSkySubColor(time));
-      _horizon2Material.SetVector("_Level1Color", getSkySubColor(time));
-      _horizon2Material.SetVector("_Level0Color", getSkySubColor(time));
     }
 
     private static float GetTime(float hour)

@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2fa4f577-5726-4a90-aad8-e4fc75abaece" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2022-onten-vr-coaster/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2022-onten-vr-coaster/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/#NVJOB Dynamic Sky/Examples Sky/Sky 2 (Day)/Horizon.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/#NVJOB Dynamic Sky/Examples Sky/Sky 2 (Day)/Horizon.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Oculus/Spatializer/scenes/materials/Ground.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Oculus/Spatializer/scenes/materials/Ground.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sky/GameClock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sky/GameClock.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +92,7 @@
       <workItem from="1659794160786" duration="7014000" />
       <workItem from="1659881762741" duration="5793000" />
       <workItem from="1659977420138" duration="3678000" />
+      <workItem from="1660048560760" duration="1306000" />
     </task>
     <servers />
   </component>
