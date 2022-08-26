@@ -208,14 +208,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 689087138668968375, guid: dd0ffc7d1f835a744b216fc5f136ac00, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: dd0ffc7d1f835a744b216fc5f136ac00, type: 3}
       propertyPath: m_Name
       value: ground
       objectReference: {fileID: 0}
+    - target: {fileID: 6539254991781085015, guid: dd0ffc7d1f835a744b216fc5f136ac00, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 19f9fc58689ce944fbe8a9eac84e3501, type: 2}
     - target: {fileID: 8879807897653716469, guid: dd0ffc7d1f835a744b216fc5f136ac00, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5fb876d70e1d44089fc16335213939da, type: 2}
+      objectReference: {fileID: 2100000, guid: 19f9fc58689ce944fbe8a9eac84e3501, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd0ffc7d1f835a744b216fc5f136ac00, type: 3}
 --- !u!1001 &466462417
@@ -1330,7 +1338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062766362}
   m_LocalRotation: {x: -0.028590836, y: 0.9377179, z: 0.33695236, w: 0.07956656}
-  m_LocalPosition: {x: 0, y: 17, z: -55.3}
+  m_LocalPosition: {x: -3.8, y: 44.5, z: -32.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1428,6 +1436,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: koyo3d
       objectReference: {fileID: 0}
+    - target: {fileID: 1065099889406730879, guid: f62d6d254a81e4e779eaad22f95da039, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 77dd4ce266a7d6e43ae0e64cad87e1f3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f62d6d254a81e4e779eaad22f95da039, type: 3}
 --- !u!1 &2088958676 stripped
