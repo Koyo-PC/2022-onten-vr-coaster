@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2fa4f577-5726-4a90-aad8-e4fc75abaece" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sky/Lightning.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Sky/Lightning.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.2022-onten-vr-coaster/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.2022-onten-vr-coaster/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Sky/GameClock.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Sky/GameClock.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +22,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/a0/782d8586/Func`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6afd1274f120405096bc1ad9e2010ba6157a00/39/0138de95/Time.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6afd1274f120405096bc1ad9e2010ba6157a00/9f/f6ed50a8/Material.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6afd1274f120405096bc1ad9e2010ba6157a00/fb/cd2a3a91/Transform.cs" root0="SKIP_HIGHLIGHTING" />
@@ -92,7 +96,7 @@
       <workItem from="1659881762741" duration="5793000" />
       <workItem from="1659977420138" duration="3678000" />
       <workItem from="1660048560760" duration="1306000" />
-      <workItem from="1661532576354" duration="2528000" />
+      <workItem from="1661532576354" duration="6599000" />
     </task>
     <servers />
   </component>

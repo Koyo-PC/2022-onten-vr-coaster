@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -9,8 +10,8 @@ namespace Sky
     public float time;
 
     // private float _startTime = GetTime(13);
-    private float _startTime = GetTime(3);
-    public float timeSpeed = 1000;
+    private float _startTime = GetTime(10);
+    public float timeSpeed = 1300;
     private const float DayLength = 60 * 60 * 24;
 
     public GameObject nightSkyObject;
@@ -21,6 +22,8 @@ namespace Sky
     private Transform _playerTransform;
     public GameObject horizon;
     private Material _horizonMaterial;
+
+    private Dictionary<float, Action> timeEvents = new();
 
 
     public void Start()
@@ -33,6 +36,8 @@ namespace Sky
       _playerTransform = playerObject.GetComponent<Transform>();
       if (horizon == null) Debug.LogError("horizon is NULL");
       _horizonMaterial = horizon.GetComponent<Renderer>().material;
+
+      timeEvents.Add(DayLength + GetTime(1), () => Lightning.instance.Run());
     }
 
     public void Update()
@@ -46,6 +51,20 @@ namespace Sky
 
       _horizonMaterial.SetVector("_Level1Color", getSkyColor(time));
       _horizonMaterial.SetVector("_Level0Color", getSkySubColor(time));
+
+      List<float> finishedEventID = new List<float>();
+      foreach (KeyValuePair<float,Action> data in timeEvents)
+      {
+        if (data.Key < time)
+        {
+          finishedEventID.Add(data.Key);
+          data.Value.Invoke();
+        }
+      }
+      foreach (var id in finishedEventID)
+      {
+        timeEvents.Remove(id);
+      }
     }
 
     private static float GetTime(float hour)
@@ -73,32 +92,33 @@ namespace Sky
      */
     private Vector4 getSkyColor(float t)
     {
+      float currentTime = t % DayLength;
       Vector4 black = new Vector4(0, 0, 0, 0.1f);
       Vector4 orange = new Vector4(0f, 0.1f, 0.8f, 0.3f);
       Vector4 blue = new Vector4(0, 0.17f, 0.6f, 0.8f);
       Vector4 white = new Vector4(0.2f, 0.33f, 0.66f, 0.7f);
-      if (t < GetTime(5)) return black;
-      if (t < GetTime(6)) return Vector4.Lerp(black, blue, (t - GetTime(5)) / GetTime(1));
-      if (t < GetTime(7)) return blue;
-      if (t < GetTime(12)) return Vector4.Lerp(blue, white, (t - GetTime(7)) / GetTime(5));
-      if (t < GetTime(17)) return Vector4.Lerp(white, blue, (t - GetTime(12)) / GetTime(5));
-      if (t < GetTime(18)) return Vector4.Lerp(blue, orange, (t - GetTime(17)) / GetTime(1));
-      if (t < GetTime(19)) return Vector4.Lerp(orange, black, (t - GetTime(18)) / GetTime(1));
+      if (currentTime < GetTime(5)) return black;
+      if (currentTime < GetTime(6)) return Vector4.Lerp(black, blue, (currentTime - GetTime(5)) / GetTime(1));
+      if (currentTime < GetTime(7)) return blue;
+      if (currentTime < GetTime(12)) return Vector4.Lerp(blue, white, (currentTime - GetTime(7)) / GetTime(5));
+      if (currentTime < GetTime(17)) return Vector4.Lerp(white, blue, (currentTime - GetTime(12)) / GetTime(5));
+      if (currentTime < GetTime(18)) return Vector4.Lerp(blue, orange, (currentTime - GetTime(17)) / GetTime(1));
+      if (currentTime < GetTime(19)) return Vector4.Lerp(orange, black, (currentTime - GetTime(18)) / GetTime(1));
       return black;
     }
 
     private Vector4 getSkySubColor(float t)
     {
+      float currentTime = t % DayLength;
       Vector4 black = new Vector4(0, 0, 0.005f, 0.5f);
       Vector4 orange = new Vector4(0.9f, 0.7f, 0.3f, 0.2f);
       Vector4 blue = new Vector4(0, 0.1647059f, 0.6f, 0.7f);
       Vector4 white = new Vector4(0.854902f, 0.8901961f, 0.9294118f, 0.3f);
-      if (t < GetTime(5)) return black;
-      if (t < GetTime(6)) return Vector4.Lerp(black, orange, (t - GetTime(5)) / GetTime(1));
-      if (t < GetTime(7)) return Vector4.Lerp(orange, white, (t - GetTime(6)) / GetTime(1));
-      if (t < GetTime(17)) return white;
-      if (t < GetTime(18)) return Vector4.Lerp(white, orange, (t - GetTime(17)) / GetTime(1));
-      if (t < GetTime(19)) return Vector4.Lerp(orange, black, (t - GetTime(18)) / GetTime(1));
+      if (currentTime < GetTime(5)) return black;
+      if (currentTime < GetTime(6)) return Vector4.Lerp(black, white, (currentTime - GetTime(5)) / GetTime(1));
+      if (currentTime < GetTime(17)) return white;
+      if (currentTime < GetTime(18)) return Vector4.Lerp(white, orange, (currentTime - GetTime(17)) / GetTime(1));
+      if (currentTime < GetTime(19)) return Vector4.Lerp(orange, black, (currentTime - GetTime(18)) / GetTime(1));
       return black;
     }
   }
