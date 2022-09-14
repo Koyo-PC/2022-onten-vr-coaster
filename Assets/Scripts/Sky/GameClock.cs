@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using System.IO.Ports;
 
 namespace Sky
 {
@@ -23,8 +24,9 @@ namespace Sky
     public GameObject horizon;
     private Material _horizonMaterial;
 
-    private Dictionary<float, Action> timeEvents = new();
+    // private Dictionary<float, Action> timeEvents = new();
 
+    public SerialHandler serialHandler;
 
     public void Start()
     {
@@ -37,7 +39,10 @@ namespace Sky
       if (horizon == null) Debug.LogError("horizon is NULL");
       _horizonMaterial = horizon.GetComponent<Renderer>().material;
 
-      timeEvents.Add(DayLength + GetTime(1), () => Lightning.instance.Run());
+      // timeEvents.Add(DayLength + GetTime(1), () => Lightning.instance.Run());
+
+      serialHandler.OnDataReceived += OnDataReceived;
+      Time.timeScale = 0;
     }
 
     public void Update()
@@ -47,24 +52,24 @@ namespace Sky
       _sunTransform.position = getSunLightVec(time) * -1000;
       // _sunTransform.Rotate(_playerTransform.position - _sunTransform.position);
       _sunTransform.LookAt(new Vector3(0, 0, 0));
-      Debug.Log("Current time : " + PosOfDay(time) * 24);
+      // Debug.Log("Current time : " + PosOfDay(time) * 24);
 
       _horizonMaterial.SetVector("_Level1Color", getSkyColor(time));
       _horizonMaterial.SetVector("_Level0Color", getSkySubColor(time));
 
-      List<float> finishedEventID = new List<float>();
-      foreach (KeyValuePair<float,Action> data in timeEvents)
-      {
-        if (data.Key < time)
-        {
-          finishedEventID.Add(data.Key);
-          data.Value.Invoke();
-        }
-      }
-      foreach (var id in finishedEventID)
-      {
-        timeEvents.Remove(id);
-      }
+      // List<float> finishedEventID = new List<float>();
+      // foreach (KeyValuePair<float,Action> data in timeEvents)
+      // {
+      //   if (data.Key < time)
+      //   {
+      //     finishedEventID.Add(data.Key);
+      //     data.Value.Invoke();
+      //   }
+      // }
+      // foreach (var id in finishedEventID)
+      // {
+      //   timeEvents.Remove(id);
+      // }
     }
 
     private static float GetTime(float hour)
@@ -120,6 +125,19 @@ namespace Sky
       if (currentTime < GetTime(18)) return Vector4.Lerp(white, orange, (currentTime - GetTime(17)) / GetTime(1));
       if (currentTime < GetTime(19)) return Vector4.Lerp(orange, black, (currentTime - GetTime(18)) / GetTime(1));
       return black;
+    }
+
+    void OnDataReceived(string message)
+    {
+      Debug.LogWarning(message);
+        switch(message) {
+        case "start":
+            Time.timeScale = 1;
+            Debug.Log("start");
+            break;
+        case "2":
+            break;
+        }
     }
   }
 }
