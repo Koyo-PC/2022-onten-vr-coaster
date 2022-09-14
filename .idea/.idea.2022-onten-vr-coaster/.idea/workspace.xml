@@ -55,7 +55,7 @@
     "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Unity.exe" />
@@ -102,6 +102,7 @@
       <workItem from="1660048560760" duration="1306000" />
       <workItem from="1661532576354" duration="6599000" />
       <workItem from="1663162710659" duration="1309000" />
+      <workItem from="1663167820962" duration="4429000" />
     </task>
     <task id="LOCAL-00001" summary="press right trigger to start">
       <created>1663176660924</created>
