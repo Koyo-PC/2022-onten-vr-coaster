@@ -26,8 +26,6 @@ namespace Sky
 
     // private Dictionary<float, Action> timeEvents = new();
 
-    public SerialHandler serialHandler;
-
     public void Start()
     {
       if (nightSkyObject == null) Debug.LogError("Sky is NULL");
@@ -41,12 +39,17 @@ namespace Sky
 
       // timeEvents.Add(DayLength + GetTime(1), () => Lightning.instance.Run());
 
-      serialHandler.OnDataReceived += OnDataReceived;
       Time.timeScale = 0;
     }
 
     public void Update()
     {
+      
+      if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+      {
+        startGame();
+      }
+      
       time += Time.deltaTime * timeSpeed;
       _skyMaterial.SetFloat("_Round", PosOfDay(time));
       _sunTransform.position = getSunLightVec(time) * -1000;
@@ -127,17 +130,9 @@ namespace Sky
       return black;
     }
 
-    void OnDataReceived(string message)
+    public void startGame()
     {
-      Debug.LogWarning(message);
-        switch(message) {
-        case "start":
-            Time.timeScale = 1;
-            Debug.Log("start");
-            break;
-        case "2":
-            break;
-        }
-    }
+      Time.timeScale = 1;
+    } 
   }
 }
