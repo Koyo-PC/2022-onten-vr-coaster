@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 using System.IO.Ports;
+using TMPro;
 
 namespace Sky
 {
@@ -24,6 +25,14 @@ namespace Sky
     public GameObject horizon;
     private Material _horizonMaterial;
 
+    // time , mode[-1 = negative, 0 = stop, 1 = positive]
+    public Dictionary<int, int> left = new Dictionary<int, int>{
+      {1, 1},
+    };
+    // public GameObject view_L;
+    // public GameObject view_R;
+    public GameObject time_view;
+
     // private Dictionary<float, Action> timeEvents = new();
 
     public void Start()
@@ -44,6 +53,10 @@ namespace Sky
 
     public void Update()
     {
+
+      // debug
+      time_view.GetComponent<TextMeshProUGUI>().text = time.ToString();
+      // end debug
       
       if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
       {
@@ -132,7 +145,7 @@ namespace Sky
 
     public void startGame()
     {
-      Time.timeScale = 1;
+      Time.timeScale = 1f;
     } 
   }
 }
