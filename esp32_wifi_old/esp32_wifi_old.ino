@@ -32,6 +32,8 @@ void setup()
 
   pinMode(2, OUTPUT);
   pinMode(0, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(14, OUTPUT);
 
 }
 
@@ -65,14 +67,20 @@ void loop() {
         if (currentLine.endsWith("GET /?true")) {
           digitalWrite(2, LOW);
           digitalWrite(0, HIGH);
+          digitalWrite(12, LOW);
+          digitalWrite(14, HIGH);
         }
         if (currentLine.endsWith("GET /?false")) {
           digitalWrite(0, LOW);
           digitalWrite(2, HIGH);
+          digitalWrite(12, HIGH);
+          digitalWrite(14, LOW);
         }
         if (currentLine.endsWith("GET /?zero")) {
           digitalWrite(0, LOW);
           digitalWrite(2, LOW);
+          digitalWrite(12, LOW);
+          digitalWrite(14, LOW);
         }
 
         //                Serial.println(currentLine);
