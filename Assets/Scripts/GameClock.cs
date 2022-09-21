@@ -1,0 +1,215 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Serialization;
+using System.IO.Ports;
+using TMPro;
+
+namespace Sky
+{
+  public class GameClock : MonoBehaviour
+  {
+    public float time;
+
+    public bool isRunning = false;
+
+    // private float _startTime = GetTime(13);
+    private float _startTime = GetTime(10);
+    public float timeSpeed = 1300;
+    private const float DayLength = 60 * 60 * 24;
+
+    public GameObject nightSkyObject;
+    private Material _skyMaterial;
+    public GameObject sunObject;
+    private Transform _sunTransform;
+    public GameObject playerObject;
+    private Transform _playerTransform;
+    public GameObject horizon;
+    private Material _horizonMaterial;
+
+    // time , mode[-1 = negative, 0 = stop, 1 = positive]
+    // public Dictionary<int, int> left = new Dictionary<int, int>{
+    //   {1, 1}
+    // };
+    
+    // public GameObject view_L;
+    // public GameObject view_R;
+    public GameObject time_view;
+    public Animator bodyAnimator;
+
+    private Dictionary<float, Action> timeEvents = new();
+
+    public void Start()
+    {
+      if (nightSkyObject == null) Debug.LogError("Sky is NULL");
+      _skyMaterial = nightSkyObject.GetComponent<Renderer>().material;
+      time = _startTime;
+      if (sunObject == null) Debug.LogError("sunObject is NULL");
+      _sunTransform = sunObject.GetComponent<Transform>();
+      _playerTransform = playerObject.GetComponent<Transform>();
+      if (horizon == null) Debug.LogError("horizon is NULL");
+      _horizonMaterial = horizon.GetComponent<Renderer>().material;
+
+      // 0
+      ESPAPI.instance.SendMessageLater(2, 1);
+      ESPAPI.instance.SendMessageLater(7, 0);
+      // 5
+      ESPAPI.instance.SendMessageLater(8,-1);
+      ESPAPI.instance.SendMessageLater(13,0);
+      // 0
+      ESPAPI.instance.SendMessageLater(14,1);
+      ESPAPI.instance.SendMessageLater(17, 0);
+      // 1
+      ESPAPI.instance.SendMessageLater(18, -1);
+      ESPAPI.instance.SendMessageLater(19, 0);
+      // 0
+      ESPAPI.instance.SendMessageLater(20, 1);
+      ESPAPI.instance.SendMessageLater(22, 0);
+      // 2
+      ESPAPI.instance.SendMessageLater(23, -1);
+      ESPAPI.instance.SendMessageLater(25, 0);
+      // 0
+      ESPAPI.instance.SendMessageLater(26, 1);
+      ESPAPI.instance.SendMessageLater(27, 0);
+      // 1
+      ESPAPI.instance.SendMessageLater(34, -1);
+      ESPAPI.instance.SendMessageLater(35, 0);
+      // 0
+      ESPAPI.instance.SendMessageLater(36, 1);
+      ESPAPI.instance.SendMessageLater(38, 0);
+      // 2
+      ESPAPI.instance.SendMessageLater(39, -1);
+      ESPAPI.instance.SendMessageLater(41, 0);
+      // 0
+      ESPAPI.instance.SendMessageLater(42, 1);
+      ESPAPI.instance.SendMessageLater(47, 0);
+      // 5
+      ESPAPI.instance.SendMessageLater(48, -1);
+      ESPAPI.instance.SendMessageLater(51, 0);
+      // 2
+      ESPAPI.instance.SendMessageLater(52, 1);
+      ESPAPI.instance.SendMessageLater(53, 0);
+      // 3
+      ESPAPI.instance.SendMessageLater(54, -1);
+      ESPAPI.instance.SendMessageLater(55, 0);
+      // 2
+      ESPAPI.instance.SendMessageLater(55.5f, 1);
+      ESPAPI.instance.SendMessageLater(56.5f, 0);
+      // 3
+      ESPAPI.instance.SendMessageLater(57, -1);
+      ESPAPI.instance.SendMessageLater(60, 0);
+
+      Time.timeScale = 0;
+    }
+
+    public void Update()
+    {
+
+      // debug
+      time_view.GetComponent<TextMeshProUGUI>().text = time.ToString();
+      // end debug
+      
+      if (!isRunning && OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+      {
+        startGame();
+      }
+      if ( isRunning && OVRInput.GetDown(OVRInput.RawButton.A))
+      {
+        stopGame();
+      }
+      
+      time += Time.deltaTime * timeSpeed;
+      _skyMaterial.SetFloat("_Round", PosOfDay(time));
+      _sunTransform.position = getSunLightVec(time) * -1000;
+      // _sunTransform.Rotate(_playerTransform.position - _sunTransform.position);
+      _sunTransform.LookAt(new Vector3(0, 0, 0));
+      // Debug.Log("Current time : " + PosOfDay(time) * 24);
+
+      _horizonMaterial.SetVector("_Level1Color", getSkyColor(time));
+      _horizonMaterial.SetVector("_Level0Color", getSkySubColor(time));
+
+      List<float> finishedEventID = new List<float>();
+      foreach (KeyValuePair<float,Action> data in timeEvents)
+      {
+        // Debug.Log(data.Key + " < " + time + "?");
+        if (data.Key < time)
+        {
+          finishedEventID.Add(data.Key);
+          data.Value.Invoke();
+        }
+      }
+      foreach (var id in finishedEventID)
+      {
+        timeEvents.Remove(id);
+      }
+    }
+
+    private static float GetTime(float hour)
+    {
+      return 60 * 60 * hour;
+    }
+
+    private float PosOfDay(float t)
+    {
+      return t / DayLength % 1;
+    }
+
+    private Vector3 getSunLightVec(float t)
+    {
+      const float latitude = 34.76f; // Koyo
+      return new Vector3(
+        (float)Math.Sin(PosOfDay(t) * 2 * Math.PI),
+        (float)(Math.Cos(latitude / 180 * Math.PI) * Math.Cos(PosOfDay(t) * 2 * Math.PI)),
+        (float)(Math.Cos(PosOfDay(t) * 2 * Math.PI) * Math.Sin(latitude / 180 * Math.PI))
+      ).normalized;
+    }
+
+    /**
+     * 0 | black | 5 | black - orange | 6 | orange - blue | 7 | blue - white | 12 | (same)
+     */
+    private Vector4 getSkyColor(float t)
+    {
+      float currentTime = t % DayLength;
+      Vector4 black = new Vector4(0, 0, 0, 0.1f);
+      Vector4 orange = new Vector4(0f, 0.1f, 0.8f, 0.3f);
+      Vector4 blue = new Vector4(0, 0.17f, 0.6f, 0.8f);
+      Vector4 white = new Vector4(0.2f, 0.33f, 0.66f, 0.7f);
+      if (currentTime < GetTime(5)) return black;
+      if (currentTime < GetTime(6)) return Vector4.Lerp(black, blue, (currentTime - GetTime(5)) / GetTime(1));
+      if (currentTime < GetTime(7)) return blue;
+      if (currentTime < GetTime(12)) return Vector4.Lerp(blue, white, (currentTime - GetTime(7)) / GetTime(5));
+      if (currentTime < GetTime(17)) return Vector4.Lerp(white, blue, (currentTime - GetTime(12)) / GetTime(5));
+      if (currentTime < GetTime(18)) return Vector4.Lerp(blue, orange, (currentTime - GetTime(17)) / GetTime(1));
+      if (currentTime < GetTime(19)) return Vector4.Lerp(orange, black, (currentTime - GetTime(18)) / GetTime(1));
+      return black;
+    }
+
+    private Vector4 getSkySubColor(float t)
+    {
+      float currentTime = t % DayLength;
+      Vector4 black = new Vector4(0, 0, 0.005f, 0.5f);
+      Vector4 orange = new Vector4(0.9f, 0.7f, 0.3f, 0.2f);
+      Vector4 blue = new Vector4(0, 0.1647059f, 0.6f, 0.7f);
+      Vector4 white = new Vector4(0.854902f, 0.8901961f, 0.9294118f, 0.3f);
+      if (currentTime < GetTime(5)) return black;
+      if (currentTime < GetTime(6)) return Vector4.Lerp(black, white, (currentTime - GetTime(5)) / GetTime(1));
+      if (currentTime < GetTime(17)) return white;
+      if (currentTime < GetTime(18)) return Vector4.Lerp(white, orange, (currentTime - GetTime(17)) / GetTime(1));
+      if (currentTime < GetTime(19)) return Vector4.Lerp(orange, black, (currentTime - GetTime(18)) / GetTime(1));
+      return black;
+    }
+
+    public void startGame()
+    {
+      isRunning = true;
+      Time.timeScale = 1f;
+    } 
+    public void stopGame()
+    {
+      isRunning = false;
+      bodyAnimator.Play("Scene", -1, 0);
+      Start();
+    } 
+  }
+}

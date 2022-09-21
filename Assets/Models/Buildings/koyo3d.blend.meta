@@ -35,6 +35,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: WhiteBrick
+    second: {fileID: 2100000, guid: ffce59aa6a420534db43264cb8f330b6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: "\u30DE\u30C6\u30EA\u30A2\u30EB"
     second: {fileID: 2100000, guid: 8d26795dd0d284608953d8898a864ce2, type: 2}
   materials:
