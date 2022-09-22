@@ -30,8 +30,8 @@ public class ESPAPI : MonoBehaviour
         }
 
         Debug.Log(mode_str);
-        // using (var req = UnityWebRequest.Get("http://192.168.30.3/?" + mode_str))
-        using (var req = UnityWebRequest.Get("http://localhost:3000/" + mode_str + "/   "))
+        using (var req = UnityWebRequest.Get("http://192.168.30.3/?" + mode_str))
+//         using (var req = UnityWebRequest.Get("http://localhost:3000/" + mode_str + "/   "))
         {
             yield return req.SendWebRequest();
         }

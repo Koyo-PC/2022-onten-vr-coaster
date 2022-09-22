@@ -118,6 +118,19 @@ namespace Sky
       {
         stopGame();
       }
+//       
+//       if (OVRInput.GetDown(OVRInput.RawButton.X))
+//       {
+//         StartCoroutine(ESPAPI.instance.SendMessage(-1));
+//       }
+//       else if (OVRInput.GetDown(OVRInput.RawButton.Y))
+//       {
+//         StartCoroutine(ESPAPI.instance.SendMessage(1));
+//       }
+//       else
+//       {
+//         StartCoroutine(ESPAPI.instance.SendMessage(0));
+//       }
       
       time += Time.deltaTime * timeSpeed;
       _skyMaterial.SetFloat("_Round", PosOfDay(time));
